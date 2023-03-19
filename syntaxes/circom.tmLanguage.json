@@ -3,29 +3,19 @@
 	"name": "Circom",
 	"patterns": [
 		{
-			"include": "#keywords"
-		},
-		{
-			"include": "#strings"
+			"include": "#comments"
 		}
 	],
 	"repository": {
-		"keywords": {
+		"comments": {
 			"patterns": [{
-				"name": "keyword.control.circom",
-				"match": "\\b(if|while|for|return)\\b"
+				"name": "comment.line.single-line.circom",
+				"match": "//.*$"
+			}, {
+				"name": "comment.block.circom",
+				"begin": "/\\*",
+				"end": "\\*/"
 			}]
-		},
-		"strings": {
-			"name": "string.quoted.double.circom",
-			"begin": "\"",
-			"end": "\"",
-			"patterns": [
-				{
-					"name": "constant.character.escape.circom",
-					"match": "\\\\."
-				}
-			]
 		}
 	},
 	"scopeName": "source.circom"
