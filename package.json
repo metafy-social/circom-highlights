@@ -1,0 +1,25 @@
+{
+  "name": "circom-highlights",
+  "displayName": "Circom Highlights",
+  "description": "Circom syntax highlighting extension for vscode",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.76.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [{
+      "id": "circom",
+      "aliases": ["Circom", "circom"],
+      "extensions": [".circom"],
+      "configuration": "./language-configuration.json"
+    }],
+    "grammars": [{
+      "language": "circom",
+      "scopeName": "source.circom",
+      "path": "./syntaxes/circom.tmLanguage.json"
+    }]
+  }
+}
