@@ -4,6 +4,12 @@
 	"patterns": [
 		{
 			"include": "#comments"
+		},
+		{
+			"include": "#identifiers"
+		},
+		{
+			"include": "#reserved-keywords"
 		}
 	],
 	"repository": {
@@ -15,6 +21,18 @@
 				"name": "comment.block.circom",
 				"begin": "/\\*",
 				"end": "\\*/"
+			}]
+		},
+		"identifiers": {
+			"patterns": [{
+				"name": "keyword.control.circom",
+				"match": "[_a-zA-Z][_$a-zA-Z0-9]{0,30}"
+			}]
+		},
+		"reserved-keywords": {
+			"patterns": [{
+				"name": "keyword.control.circom",
+				"match": "\\b(signal|input|output|public|template|component|var|function|return|if|else|for|while|do|log|assert|include|parallel|pragma circom|pragma custom_templates)"
 			}]
 		}
 	},
