@@ -9,6 +9,12 @@
 			"include": "#reserved-keywords"
 		},
 		{
+			"include": "#variable-declaration"
+		},
+		{
+			"include": "#methods"
+		},
+		{
 			"include": "#strings"
 		},
 		{
@@ -38,7 +44,13 @@
 		"reserved-keywords": {
 			"patterns": [{
 				"name": "keyword.control.circom",
-				"match": "\\b(signal|input|output|public|template|component|var|function|return|if|else|for|while|do|log|assert|include|parallel|pragma circom|pragma custom_templates)"
+				"match": "\\b(signal|template|component|function|return|if|else|for|while|do|assert|include|parallel|pragma circom|pragma custom_templates)"
+			}]
+		},
+		"variable-declaration": {
+			"patterns": [{
+				"name": "storage.type.circom",
+				"match": "\\b(var|input|output|public|log)"
 			}]
 		},
 		"strings": {
@@ -80,6 +92,12 @@
 			"patterns": [{
 				"name": "variable.other.circom",
 				"match": "\\b[a-zA-Z_][a-zA-Z0-9_]*\\b"
+			}]
+		},
+		"methods": {
+			"patterns": [{
+				"name": "support.function.circom",
+				"match": "\\b(\\w+)(?=\\()"
 			}]
 		}
 	},
